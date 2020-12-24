@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F9C1A221D79211E44BFDB95 /* Pods_DoitSoftwareIosTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5578999003B6401FAE44F9 /* Pods_DoitSoftwareIosTestTask.framework */; };
 		C57EA8F7259548BA009CB01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57EA8F6259548BA009CB01F /* AppDelegate.swift */; };
 		C57EA8F9259548BA009CB01F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57EA8F8259548BA009CB01F /* SceneDelegate.swift */; };
 		C57EA8FB259548BA009CB01F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57EA8FA259548BA009CB01F /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B5578999003B6401FAE44F9 /* Pods_DoitSoftwareIosTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitSoftwareIosTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA218422C652FBD056414A8 /* Pods-DoitSoftwareIosTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareIosTestTask.release.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareIosTestTask/Pods-DoitSoftwareIosTestTask.release.xcconfig"; sourceTree = "<group>"; };
 		C57EA8F3259548BA009CB01F /* DoitSoftwareIosTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoitSoftwareIosTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57EA8F6259548BA009CB01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C57EA8F8259548BA009CB01F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		C57EA8FF259548BB009CB01F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57EA902259548BB009CB01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57EA904259548BB009CB01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD6CC37C36CDE9A00E2012E /* Pods-DoitSoftwareIosTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareIosTestTask.debug.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareIosTestTask/Pods-DoitSoftwareIosTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9C1A221D79211E44BFDB95 /* Pods_DoitSoftwareIosTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37DE0997216E1889312F83FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B5578999003B6401FAE44F9 /* Pods_DoitSoftwareIosTestTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C57EA8EA259548BA009CB01F = {
 			isa = PBXGroup;
 			children = (
 				C57EA8F5259548BA009CB01F /* DoitSoftwareIosTestTask */,
 				C57EA8F4259548BA009CB01F /* Products */,
+				E1CDD2D9BDD63C2ADF6094DC /* Pods */,
+				37DE0997216E1889312F83FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = DoitSoftwareIosTestTask;
 			sourceTree = "<group>";
 		};
+		E1CDD2D9BDD63C2ADF6094DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCD6CC37C36CDE9A00E2012E /* Pods-DoitSoftwareIosTestTask.debug.xcconfig */,
+				ADA218422C652FBD056414A8 /* Pods-DoitSoftwareIosTestTask.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C57EA907259548BB009CB01F /* Build configuration list for PBXNativeTarget "DoitSoftwareIosTestTask" */;
 			buildPhases = (
+				A66EE374ABC8AB8F1D6CE8C9 /* [CP] Check Pods Manifest.lock */,
 				C57EA8EF259548BA009CB01F /* Sources */,
 				C57EA8F0259548BA009CB01F /* Frameworks */,
 				C57EA8F1259548BA009CB01F /* Resources */,
@@ -131,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A66EE374ABC8AB8F1D6CE8C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoitSoftwareIosTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C57EA8EF259548BA009CB01F /* Sources */ = {
@@ -283,6 +334,7 @@
 		};
 		C57EA908259548BB009CB01F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD6CC37C36CDE9A00E2012E /* Pods-DoitSoftwareIosTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +354,7 @@
 		};
 		C57EA909259548BB009CB01F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADA218422C652FBD056414A8 /* Pods-DoitSoftwareIosTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
