@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 2f76d4d913ed8d64a3b3bf0f08a855e2985dd2e1
+PODS:
+  - AFoundation (0.1.2)
+
+DEPENDENCIES:
+  - AFoundation (from `https://github.com/ihormyroniuk/AFoundation`, commit `2c1f537e7a908577782f67a8d6323f57fb92b2ca`)
+
+EXTERNAL SOURCES:
+  AFoundation:
+    :commit: 2c1f537e7a908577782f67a8d6323f57fb92b2ca
+    :git: https://github.com/ihormyroniuk/AFoundation
+
+CHECKOUT OPTIONS:
+  AFoundation:
+    :commit: 2c1f537e7a908577782f67a8d6323f57fb92b2ca
+    :git: https://github.com/ihormyroniuk/AFoundation
+
+SPEC CHECKSUMS:
+  AFoundation: 92592f523d7a2d8748e77dd649047abba07a17fd
+
+PODFILE CHECKSUM: a63de4f5c2106e2aa8047f3e1787c5efdbe6220f
 
 COCOAPODS: 1.9.1
