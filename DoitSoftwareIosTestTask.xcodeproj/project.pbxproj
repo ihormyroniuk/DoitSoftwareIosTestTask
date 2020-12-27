@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6278CC12B1844A8BD7F9340D /* Pods_DoitSoftwareIosTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D721C2596913F938D62403 /* Pods_DoitSoftwareIosTestTask.framework */; };
+		7A9A6F511CA69E50BBE89047 /* Pods_DoitSoftwareIosTestTaskPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BB8459B57D039EC24C8B4C /* Pods_DoitSoftwareIosTestTaskPresentation.framework */; };
 		C5780EBE259624B700C26416 /* CreateTaskHttpExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780EBD259624B700C26416 /* CreateTaskHttpExchange.swift */; };
 		C5780EC2259624D300C26416 /* CreatingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780EC1259624D300C26416 /* CreatingTask.swift */; };
 		C5780EC52596252A00C26416 /* TaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780EC42596252A00C26416 /* TaskPriority.swift */; };
@@ -45,6 +46,37 @@
 		C57EA95F25956322009CB01F /* AuthorizeUserByCredentialsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57EA95E25956322009CB01F /* AuthorizeUserByCredentialsResult.swift */; };
 		C5ECAC2725978A9800028DD3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC2625978A9800028DD3 /* main.swift */; };
 		C5ECAC2B25978AED00028DD3 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC2A25978AED00028DD3 /* Application.swift */; };
+		C5ECAC3A25978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = C5ECAC3825978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5ECAC3D25978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECAC3625978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework */; };
+		C5ECAC3E25978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECAC3625978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5ECAC4525978D4000028DD3 /* IphonePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC4425978D4000028DD3 /* IphonePresentation.swift */; };
+		C5ECAC5525978F2100028DD3 /* ScreenViewWithNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC5425978F2100028DD3 /* ScreenViewWithNavigationBar.swift */; };
+		C5ECAC5A25978F9600028DD3 /* SignInSignUpScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC5925978F9600028DD3 /* SignInSignUpScreenController.swift */; };
+		C5ECAC6025978FA500028DD3 /* SignInSignUpScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC5F25978FA500028DD3 /* SignInSignUpScreenView.swift */; };
+		C5ECAC642597926E00028DD3 /* SignInSignUpScreenStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5ECAC632597926E00028DD3 /* SignInSignUpScreenStrings.strings */; };
+		C5ECAC692597A21D00028DD3 /* SignInResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC682597A21D00028DD3 /* SignInResult.swift */; };
+		C5ECAC6D2597A2C700028DD3 /* SignUpResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC6C2597A2C700028DD3 /* SignUpResult.swift */; };
+		C5ECAC712597A32900028DD3 /* SignInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC702597A32900028DD3 /* SignInData.swift */; };
+		C5ECAC7F2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = C5ECAC7D2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5ECAC822597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECAC7B2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework */; };
+		C5ECAC832597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECAC7B2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C5ECAC8B2597D65E00028DD3 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC8A2597D65E00028DD3 /* Storage.swift */; };
+		C5ECAC942597D81600028DD3 /* TasksListScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC932597D81600028DD3 /* TasksListScreenController.swift */; };
+		C5ECAC992597D82300028DD3 /* TasksListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECAC982597D82300028DD3 /* TasksListScreenView.swift */; };
+		C5ECAC9E2597D84900028DD3 /* TasksListScreenStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5ECAC9D2597D84900028DD3 /* TasksListScreenStrings.strings */; };
+		C5ECACA32597DD7C00028DD3 /* TasksListScreenCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACA22597DD7C00028DD3 /* TasksListScreenCollectionViewLayout.swift */; };
+		C5ECACAE2597DE7500028DD3 /* TasksListScreenTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACAD2597DE7500028DD3 /* TasksListScreenTaskCollectionViewCell.swift */; };
+		C5ECACB62597DF7700028DD3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACB52597DF7700028DD3 /* Task.swift */; };
+		C5ECACC42597F65A00028DD3 /* TaskDetailsScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACC32597F65A00028DD3 /* TaskDetailsScreenController.swift */; };
+		C5ECACC92597F67C00028DD3 /* TaskDetailsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACC82597F67C00028DD3 /* TaskDetailsScreenView.swift */; };
+		C5ECACCE2597F93500028DD3 /* TaskDetailsScreenStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5ECACCD2597F93500028DD3 /* TaskDetailsScreenStrings.strings */; };
+		C5ECACD42598BDF200028DD3 /* CreateTaskScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACD32598BDF200028DD3 /* CreateTaskScreenController.swift */; };
+		C5ECACD92598BE0400028DD3 /* CreateTaskScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACD82598BE0400028DD3 /* CreateTaskScreenView.swift */; };
+		C5ECACDE2598BE3400028DD3 /* CreateTaskScreenStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5ECACDD2598BE3400028DD3 /* CreateTaskScreenStrings.strings */; };
+		C5ECACE32598DB4F00028DD3 /* CreateTaskResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACE22598DB4F00028DD3 /* CreateTaskResult.swift */; };
+		C5ECACE9259938A000028DD3 /* EditTaskScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACE8259938A000028DD3 /* EditTaskScreenController.swift */; };
+		C5ECACF1259938AC00028DD3 /* EditTaskScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ECACF0259938AC00028DD3 /* EditTaskScreenView.swift */; };
+		C5ECACF6259938D800028DD3 /* EditTaskScreenStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5ECACF5259938D800028DD3 /* EditTaskScreenStrings.strings */; };
 		FAF3D7AAD96601A4320F6023 /* Pods_DoitSoftwareTestApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3380C9F8AEE98534171508CA /* Pods_DoitSoftwareTestApi.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +88,20 @@
 			remoteGlobalIDString = C57EA91525954E02009CB01F;
 			remoteInfo = DoitSoftwareTestApi;
 		};
+		C5ECAC3B25978D2200028DD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C57EA8EB259548BA009CB01F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5ECAC3525978D2200028DD3;
+			remoteInfo = DoitSoftwareIosTestTaskPresentation;
+		};
+		C5ECAC802597D60500028DD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C57EA8EB259548BA009CB01F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5ECAC7A2597D60500028DD3;
+			remoteInfo = DoitSoftwareIosTestTaskStorage;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +111,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C5ECAC832597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework in Embed Frameworks */,
+				C5ECAC3E25978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework in Embed Frameworks */,
 				C57EA91E25954E02009CB01F /* DoitSoftwareTestApi.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -73,9 +121,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		10BB8459B57D039EC24C8B4C /* Pods_DoitSoftwareIosTestTaskPresentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitSoftwareIosTestTaskPresentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2165CE5C2769EA389BCC0239 /* Pods-DoitSoftwareIosTestTaskPresentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareIosTestTaskPresentation.release.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareIosTestTaskPresentation/Pods-DoitSoftwareIosTestTaskPresentation.release.xcconfig"; sourceTree = "<group>"; };
 		3380C9F8AEE98534171508CA /* Pods_DoitSoftwareTestApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitSoftwareTestApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4C9DED6BA5FF585E866655 /* Pods-DoitSoftwareTestApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareTestApi.release.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareTestApi/Pods-DoitSoftwareTestApi.release.xcconfig"; sourceTree = "<group>"; };
 		96EA839887824F32584942D6 /* Pods-DoitSoftwareTestApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareTestApi.debug.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareTestApi/Pods-DoitSoftwareTestApi.debug.xcconfig"; sourceTree = "<group>"; };
+		B3ACF49E34C9B1A97EB8C0F1 /* Pods-DoitSoftwareIosTestTaskPresentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareIosTestTaskPresentation.debug.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareIosTestTaskPresentation/Pods-DoitSoftwareIosTestTaskPresentation.debug.xcconfig"; sourceTree = "<group>"; };
 		C5780EBD259624B700C26416 /* CreateTaskHttpExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskHttpExchange.swift; sourceTree = "<group>"; };
 		C5780EC1259624D300C26416 /* CreatingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingTask.swift; sourceTree = "<group>"; };
 		C5780EC42596252A00C26416 /* TaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriority.swift; sourceTree = "<group>"; };
@@ -115,6 +166,37 @@
 		C57EA95E25956322009CB01F /* AuthorizeUserByCredentialsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeUserByCredentialsResult.swift; sourceTree = "<group>"; };
 		C5ECAC2625978A9800028DD3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C5ECAC2A25978AED00028DD3 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		C5ECAC3625978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DoitSoftwareIosTestTaskPresentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5ECAC3825978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoitSoftwareIosTestTaskPresentation.h; sourceTree = "<group>"; };
+		C5ECAC3925978D2200028DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5ECAC4425978D4000028DD3 /* IphonePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IphonePresentation.swift; sourceTree = "<group>"; };
+		C5ECAC5425978F2100028DD3 /* ScreenViewWithNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewWithNavigationBar.swift; sourceTree = "<group>"; };
+		C5ECAC5925978F9600028DD3 /* SignInSignUpScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpScreenController.swift; sourceTree = "<group>"; };
+		C5ECAC5F25978FA500028DD3 /* SignInSignUpScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpScreenView.swift; sourceTree = "<group>"; };
+		C5ECAC632597926E00028DD3 /* SignInSignUpScreenStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = SignInSignUpScreenStrings.strings; sourceTree = "<group>"; };
+		C5ECAC682597A21D00028DD3 /* SignInResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResult.swift; sourceTree = "<group>"; };
+		C5ECAC6C2597A2C700028DD3 /* SignUpResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResult.swift; sourceTree = "<group>"; };
+		C5ECAC702597A32900028DD3 /* SignInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInData.swift; sourceTree = "<group>"; };
+		C5ECAC7B2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DoitSoftwareIosTestTaskStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5ECAC7D2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoitSoftwareIosTestTaskStorage.h; sourceTree = "<group>"; };
+		C5ECAC7E2597D60500028DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5ECAC8A2597D65E00028DD3 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		C5ECAC932597D81600028DD3 /* TasksListScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListScreenController.swift; sourceTree = "<group>"; };
+		C5ECAC982597D82300028DD3 /* TasksListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListScreenView.swift; sourceTree = "<group>"; };
+		C5ECAC9D2597D84900028DD3 /* TasksListScreenStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TasksListScreenStrings.strings; sourceTree = "<group>"; };
+		C5ECACA22597DD7C00028DD3 /* TasksListScreenCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListScreenCollectionViewLayout.swift; sourceTree = "<group>"; };
+		C5ECACAD2597DE7500028DD3 /* TasksListScreenTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListScreenTaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5ECACB52597DF7700028DD3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		C5ECACC32597F65A00028DD3 /* TaskDetailsScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsScreenController.swift; sourceTree = "<group>"; };
+		C5ECACC82597F67C00028DD3 /* TaskDetailsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsScreenView.swift; sourceTree = "<group>"; };
+		C5ECACCD2597F93500028DD3 /* TaskDetailsScreenStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TaskDetailsScreenStrings.strings; sourceTree = "<group>"; };
+		C5ECACD32598BDF200028DD3 /* CreateTaskScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskScreenController.swift; sourceTree = "<group>"; };
+		C5ECACD82598BE0400028DD3 /* CreateTaskScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskScreenView.swift; sourceTree = "<group>"; };
+		C5ECACDD2598BE3400028DD3 /* CreateTaskScreenStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = CreateTaskScreenStrings.strings; sourceTree = "<group>"; };
+		C5ECACE22598DB4F00028DD3 /* CreateTaskResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskResult.swift; sourceTree = "<group>"; };
+		C5ECACE8259938A000028DD3 /* EditTaskScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskScreenController.swift; sourceTree = "<group>"; };
+		C5ECACF0259938AC00028DD3 /* EditTaskScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskScreenView.swift; sourceTree = "<group>"; };
+		C5ECACF5259938D800028DD3 /* EditTaskScreenStrings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = EditTaskScreenStrings.strings; sourceTree = "<group>"; };
 		D2D721C2596913F938D62403 /* Pods_DoitSoftwareIosTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoitSoftwareIosTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0993841080935E4E61434F6 /* Pods-DoitSoftwareIosTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareIosTestTask.release.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareIosTestTask/Pods-DoitSoftwareIosTestTask.release.xcconfig"; sourceTree = "<group>"; };
 		F403B403A14BFE7A5F541F98 /* Pods-DoitSoftwareIosTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareIosTestTask.debug.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareIosTestTask/Pods-DoitSoftwareIosTestTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +207,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5ECAC3D25978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework in Frameworks */,
 				C57EA91D25954E02009CB01F /* DoitSoftwareTestApi.framework in Frameworks */,
+				C5ECAC822597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework in Frameworks */,
 				6278CC12B1844A8BD7F9340D /* Pods_DoitSoftwareIosTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +222,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5ECAC3325978D2200028DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A9A6F511CA69E50BBE89047 /* Pods_DoitSoftwareIosTestTaskPresentation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5ECAC782597D60500028DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -146,6 +245,7 @@
 			children = (
 				3380C9F8AEE98534171508CA /* Pods_DoitSoftwareTestApi.framework */,
 				D2D721C2596913F938D62403 /* Pods_DoitSoftwareIosTestTask.framework */,
+				10BB8459B57D039EC24C8B4C /* Pods_DoitSoftwareIosTestTaskPresentation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +335,8 @@
 			children = (
 				C57EA8F5259548BA009CB01F /* DoitSoftwareIosTestTask */,
 				C57EA91725954E02009CB01F /* DoitSoftwareTestApi */,
+				C5ECAC3725978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation */,
+				C5ECAC7C2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage */,
 				C57EA8F4259548BA009CB01F /* Products */,
 				E1CDD2D9BDD63C2ADF6094DC /* Pods */,
 				37DE0997216E1889312F83FB /* Frameworks */,
@@ -246,6 +348,8 @@
 			children = (
 				C57EA8F3259548BA009CB01F /* DoitSoftwareIosTestTask.app */,
 				C57EA91625954E02009CB01F /* DoitSoftwareTestApi.framework */,
+				C5ECAC3625978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework */,
+				C5ECAC7B2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -293,6 +397,105 @@
 			path = AuthorizeUserByCredentials;
 			sourceTree = "<group>";
 		};
+		C5ECAC3725978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECAC672597A20900028DD3 /* Data */,
+				C5ECAC4425978D4000028DD3 /* IphonePresentation.swift */,
+				C5ECAC5325978EED00028DD3 /* Screens */,
+				C5ECAC3825978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.h */,
+				C5ECAC3925978D2200028DD3 /* Info.plist */,
+			);
+			path = DoitSoftwareIosTestTaskPresentation;
+			sourceTree = "<group>";
+		};
+		C5ECAC5325978EED00028DD3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECAC5425978F2100028DD3 /* ScreenViewWithNavigationBar.swift */,
+				C5ECAC5825978F6D00028DD3 /* SignInSignUp */,
+				C5ECAC922597D7E300028DD3 /* TasksList */,
+				C5ECACC22597F64800028DD3 /* TaskDetails */,
+				C5ECACD22598BDAD00028DD3 /* CreateTask */,
+				C5ECACE72599388900028DD3 /* EditTask */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C5ECAC5825978F6D00028DD3 /* SignInSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECAC5925978F9600028DD3 /* SignInSignUpScreenController.swift */,
+				C5ECAC5F25978FA500028DD3 /* SignInSignUpScreenView.swift */,
+				C5ECAC632597926E00028DD3 /* SignInSignUpScreenStrings.strings */,
+			);
+			path = SignInSignUp;
+			sourceTree = "<group>";
+		};
+		C5ECAC672597A20900028DD3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECAC682597A21D00028DD3 /* SignInResult.swift */,
+				C5ECAC702597A32900028DD3 /* SignInData.swift */,
+				C5ECAC6C2597A2C700028DD3 /* SignUpResult.swift */,
+				C5ECACB52597DF7700028DD3 /* Task.swift */,
+				C5ECACE22598DB4F00028DD3 /* CreateTaskResult.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C5ECAC7C2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECAC8A2597D65E00028DD3 /* Storage.swift */,
+				C5ECAC7D2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.h */,
+				C5ECAC7E2597D60500028DD3 /* Info.plist */,
+			);
+			path = DoitSoftwareIosTestTaskStorage;
+			sourceTree = "<group>";
+		};
+		C5ECAC922597D7E300028DD3 /* TasksList */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECAC932597D81600028DD3 /* TasksListScreenController.swift */,
+				C5ECAC982597D82300028DD3 /* TasksListScreenView.swift */,
+				C5ECACA22597DD7C00028DD3 /* TasksListScreenCollectionViewLayout.swift */,
+				C5ECACAD2597DE7500028DD3 /* TasksListScreenTaskCollectionViewCell.swift */,
+				C5ECAC9D2597D84900028DD3 /* TasksListScreenStrings.strings */,
+			);
+			path = TasksList;
+			sourceTree = "<group>";
+		};
+		C5ECACC22597F64800028DD3 /* TaskDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECACC32597F65A00028DD3 /* TaskDetailsScreenController.swift */,
+				C5ECACC82597F67C00028DD3 /* TaskDetailsScreenView.swift */,
+				C5ECACCD2597F93500028DD3 /* TaskDetailsScreenStrings.strings */,
+			);
+			path = TaskDetails;
+			sourceTree = "<group>";
+		};
+		C5ECACD22598BDAD00028DD3 /* CreateTask */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECACD32598BDF200028DD3 /* CreateTaskScreenController.swift */,
+				C5ECACD82598BE0400028DD3 /* CreateTaskScreenView.swift */,
+				C5ECACDD2598BE3400028DD3 /* CreateTaskScreenStrings.strings */,
+			);
+			path = CreateTask;
+			sourceTree = "<group>";
+		};
+		C5ECACE72599388900028DD3 /* EditTask */ = {
+			isa = PBXGroup;
+			children = (
+				C5ECACE8259938A000028DD3 /* EditTaskScreenController.swift */,
+				C5ECACF0259938AC00028DD3 /* EditTaskScreenView.swift */,
+				C5ECACF5259938D800028DD3 /* EditTaskScreenStrings.strings */,
+			);
+			path = EditTask;
+			sourceTree = "<group>";
+		};
 		E1CDD2D9BDD63C2ADF6094DC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +503,8 @@
 				4B4C9DED6BA5FF585E866655 /* Pods-DoitSoftwareTestApi.release.xcconfig */,
 				F403B403A14BFE7A5F541F98 /* Pods-DoitSoftwareIosTestTask.debug.xcconfig */,
 				E0993841080935E4E61434F6 /* Pods-DoitSoftwareIosTestTask.release.xcconfig */,
+				B3ACF49E34C9B1A97EB8C0F1 /* Pods-DoitSoftwareIosTestTaskPresentation.debug.xcconfig */,
+				2165CE5C2769EA389BCC0239 /* Pods-DoitSoftwareIosTestTaskPresentation.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -312,6 +517,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57EA91A25954E02009CB01F /* DoitSoftwareTestApi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5ECAC3125978D2200028DD3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5ECAC3A25978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5ECAC762597D60500028DD3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5ECAC7F2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +554,8 @@
 			);
 			dependencies = (
 				C57EA91C25954E02009CB01F /* PBXTargetDependency */,
+				C5ECAC3C25978D2200028DD3 /* PBXTargetDependency */,
+				C5ECAC812597D60500028DD3 /* PBXTargetDependency */,
 			);
 			name = DoitSoftwareIosTestTask;
 			productName = DoitSoftwareIosTestTask;
@@ -358,6 +581,43 @@
 			productReference = C57EA91625954E02009CB01F /* DoitSoftwareTestApi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		C5ECAC3525978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5ECAC3F25978D2200028DD3 /* Build configuration list for PBXNativeTarget "DoitSoftwareIosTestTaskPresentation" */;
+			buildPhases = (
+				16020EAE85F997372C11BB5C /* [CP] Check Pods Manifest.lock */,
+				C5ECAC3125978D2200028DD3 /* Headers */,
+				C5ECAC3225978D2200028DD3 /* Sources */,
+				C5ECAC3325978D2200028DD3 /* Frameworks */,
+				C5ECAC3425978D2200028DD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoitSoftwareIosTestTaskPresentation;
+			productName = DoitSoftwareIosTestTaskPresentation;
+			productReference = C5ECAC3625978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C5ECAC7A2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5ECAC842597D60500028DD3 /* Build configuration list for PBXNativeTarget "DoitSoftwareIosTestTaskStorage" */;
+			buildPhases = (
+				C5ECAC762597D60500028DD3 /* Headers */,
+				C5ECAC772597D60500028DD3 /* Sources */,
+				C5ECAC782597D60500028DD3 /* Frameworks */,
+				C5ECAC792597D60500028DD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoitSoftwareIosTestTaskStorage;
+			productName = DoitSoftwareIosTestTaskStorage;
+			productReference = C5ECAC7B2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -371,6 +631,14 @@
 						CreatedOnToolsVersion = 12.2;
 					};
 					C57EA91525954E02009CB01F = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					C5ECAC3525978D2200028DD3 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+					C5ECAC7A2597D60500028DD3 = {
 						CreatedOnToolsVersion = 12.2;
 						LastSwiftMigration = 1220;
 					};
@@ -391,6 +659,8 @@
 			targets = (
 				C57EA8F2259548BA009CB01F /* DoitSoftwareIosTestTask */,
 				C57EA91525954E02009CB01F /* DoitSoftwareTestApi */,
+				C5ECAC3525978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation */,
+				C5ECAC7A2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage */,
 			);
 		};
 /* End PBXProject section */
@@ -412,9 +682,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5ECAC3425978D2200028DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5ECACDE2598BE3400028DD3 /* CreateTaskScreenStrings.strings in Resources */,
+				C5ECACCE2597F93500028DD3 /* TaskDetailsScreenStrings.strings in Resources */,
+				C5ECACF6259938D800028DD3 /* EditTaskScreenStrings.strings in Resources */,
+				C5ECAC9E2597D84900028DD3 /* TasksListScreenStrings.strings in Resources */,
+				C5ECAC642597926E00028DD3 /* SignInSignUpScreenStrings.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5ECAC792597D60500028DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16020EAE85F997372C11BB5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoitSoftwareIosTestTaskPresentation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		162C138A9B421196AB9254BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -525,6 +836,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5ECAC3225978D2200028DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5ECACE9259938A000028DD3 /* EditTaskScreenController.swift in Sources */,
+				C5ECACC92597F67C00028DD3 /* TaskDetailsScreenView.swift in Sources */,
+				C5ECACD42598BDF200028DD3 /* CreateTaskScreenController.swift in Sources */,
+				C5ECAC942597D81600028DD3 /* TasksListScreenController.swift in Sources */,
+				C5ECAC712597A32900028DD3 /* SignInData.swift in Sources */,
+				C5ECAC6025978FA500028DD3 /* SignInSignUpScreenView.swift in Sources */,
+				C5ECACE32598DB4F00028DD3 /* CreateTaskResult.swift in Sources */,
+				C5ECAC5525978F2100028DD3 /* ScreenViewWithNavigationBar.swift in Sources */,
+				C5ECACB62597DF7700028DD3 /* Task.swift in Sources */,
+				C5ECACD92598BE0400028DD3 /* CreateTaskScreenView.swift in Sources */,
+				C5ECAC992597D82300028DD3 /* TasksListScreenView.swift in Sources */,
+				C5ECAC692597A21D00028DD3 /* SignInResult.swift in Sources */,
+				C5ECACA32597DD7C00028DD3 /* TasksListScreenCollectionViewLayout.swift in Sources */,
+				C5ECAC5A25978F9600028DD3 /* SignInSignUpScreenController.swift in Sources */,
+				C5ECACF1259938AC00028DD3 /* EditTaskScreenView.swift in Sources */,
+				C5ECAC6D2597A2C700028DD3 /* SignUpResult.swift in Sources */,
+				C5ECACAE2597DE7500028DD3 /* TasksListScreenTaskCollectionViewCell.swift in Sources */,
+				C5ECAC4525978D4000028DD3 /* IphonePresentation.swift in Sources */,
+				C5ECACC42597F65A00028DD3 /* TaskDetailsScreenController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5ECAC772597D60500028DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5ECAC8B2597D65E00028DD3 /* Storage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -532,6 +877,16 @@
 			isa = PBXTargetDependency;
 			target = C57EA91525954E02009CB01F /* DoitSoftwareTestApi */;
 			targetProxy = C57EA91B25954E02009CB01F /* PBXContainerItemProxy */;
+		};
+		C5ECAC3C25978D2200028DD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5ECAC3525978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation */;
+			targetProxy = C5ECAC3B25978D2200028DD3 /* PBXContainerItemProxy */;
+		};
+		C5ECAC812597D60500028DD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5ECAC7A2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage */;
+			targetProxy = C5ECAC802597D60500028DD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -764,6 +1119,122 @@
 			};
 			name = Release;
 		};
+		C5ECAC4025978D2200028DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3ACF49E34C9B1A97EB8C0F1 /* Pods-DoitSoftwareIosTestTaskPresentation.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9R8XNB4KQ9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DoitSoftwareIosTestTaskPresentation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.ihormyroniuk.DoitSoftwareIosTestTaskPresentation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C5ECAC4125978D2200028DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2165CE5C2769EA389BCC0239 /* Pods-DoitSoftwareIosTestTaskPresentation.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9R8XNB4KQ9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DoitSoftwareIosTestTaskPresentation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.ihormyroniuk.DoitSoftwareIosTestTaskPresentation;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C5ECAC852597D60500028DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9R8XNB4KQ9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DoitSoftwareIosTestTaskStorage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.ihormyroniuk.DoitSoftwareIosTestTaskStorage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C5ECAC862597D60500028DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9R8XNB4KQ9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DoitSoftwareIosTestTaskStorage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.ihormyroniuk.DoitSoftwareIosTestTaskStorage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -790,6 +1261,24 @@
 			buildConfigurations = (
 				C57EA92025954E02009CB01F /* Debug */,
 				C57EA92125954E02009CB01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5ECAC3F25978D2200028DD3 /* Build configuration list for PBXNativeTarget "DoitSoftwareIosTestTaskPresentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5ECAC4025978D2200028DD3 /* Debug */,
+				C5ECAC4125978D2200028DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5ECAC842597D60500028DD3 /* Build configuration list for PBXNativeTarget "DoitSoftwareIosTestTaskStorage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5ECAC852597D60500028DD3 /* Debug */,
+				C5ECAC862597D60500028DD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

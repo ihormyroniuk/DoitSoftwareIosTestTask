@@ -9,6 +9,6 @@ import Foundation
 
 public enum TaskPriority: String {
     case high = "High"
-    case medium = "Medium"
+    case medium = "Normal"
     case low = "Low"
 }

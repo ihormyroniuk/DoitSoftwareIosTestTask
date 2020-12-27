@@ -46,10 +46,10 @@ class UrlSessionSharedInteractor: Interactor {
         dataTask.resume()
     }
     
-    func authorizeUserByCredentials(addingNewUser: AddingNewUser, completionHandler: @escaping (Result<AuthorizeUserByCredentialsResult, InteractionError>) -> ()) {
+    func authorizeUserByCredentials(authorizingUserByCredentials: AddingNewUser, completionHandler: @escaping (Result<AuthorizeUserByCredentialsResult, InteractionError>) -> ()) {
         let httpExchange = api.authorizeUserByCredentials()
         let httpRequest: HttpRequest
-        do { httpRequest = try httpExchange.constructHttpRequest(data: addingNewUser) } catch {
+        do { httpRequest = try httpExchange.constructHttpRequest(data: authorizingUserByCredentials) } catch {
             completionHandler(.failure(.unexpectedError(error: error)))
             return
         }

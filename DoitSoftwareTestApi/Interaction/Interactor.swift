@@ -9,7 +9,7 @@ import Foundation
 
 public protocol Interactor {
     func addNewUser(addingNewUser: AddingNewUser, completionHandler: @escaping (Result<AddNewUserResult, InteractionError>) -> ())
-    func authorizeUserByCredentials(addingNewUser: AddingNewUser, completionHandler: @escaping (Result<AuthorizeUserByCredentialsResult, InteractionError>) -> ())
+    func authorizeUserByCredentials(authorizingUserByCredentials: AddingNewUser, completionHandler: @escaping (Result<AuthorizeUserByCredentialsResult, InteractionError>) -> ())
     func createTask(creatingTask: CreatingTask, completionHandler: @escaping (Result<CreateTaskResult, InteractionError>) -> ())
     func getTasksList(gettingTasksList: GettingTasksList, completionHandler: @escaping (Result<GetTasksListResult, InteractionError>) -> ())
     func getTaskDetails(gettingTaskDetails: GettingTaskDetails, completionHandler: @escaping (Result<GetTaskDetailsResult, InteractionError>) -> ())
