@@ -112,7 +112,7 @@ class Application: AUIEmptyApplication, IphonePresentationDelegate {
                         case .medium: priority = .medium
                         case .low: priority = .low
                         }
-                        let task = Task(id: apiTask.id, title: apiTask.title, dueBy: Date(timeIntervalSince1970: TimeInterval(apiTask.dueBy)), priority: priority)
+                        let task = Task(id: apiTask.id, title: apiTask.title, dueBy: apiTask.dueBy, priority: priority)
                         presentationTasks.append(task)
                     }
                     completionHandler(.success(presentationTasks))
@@ -143,7 +143,7 @@ class Application: AUIEmptyApplication, IphonePresentationDelegate {
                     case .medium: priority = .medium
                     case .low: priority = .low
                     }
-                    let presentationTask = Task(id: gettedTaskDetails.id, title: gettedTaskDetails.title, dueBy: Date(timeIntervalSince1970: TimeInterval(gettedTaskDetails.dueBy)), priority: priority)
+                    let presentationTask = Task(id: gettedTaskDetails.id, title: gettedTaskDetails.title, dueBy: gettedTaskDetails.dueBy, priority: priority)
                     completionHandler(.success(presentationTask))
                 case .unauthorized:
                     self.storage.token = nil
@@ -188,7 +188,7 @@ class Application: AUIEmptyApplication, IphonePresentationDelegate {
         case .medium: apiPriority = .medium
         case .low: apiPriority = .low
         }
-        let creatingTask = DoitSoftwareTestApi.CreatingTask(token: token, title: creatingTask.title, dueBy: Int(creatingTask.dueBy.timeIntervalSince1970), priority: apiPriority)
+        let creatingTask = DoitSoftwareTestApi.CreatingTask(token: token, title: creatingTask.title, dueBy: creatingTask.dueBy, priority: apiPriority)
         apiInteractor.createTask(creatingTask: creatingTask) { (result) in
             switch result {
             case .success(let createTaskResult):
@@ -218,7 +218,7 @@ class Application: AUIEmptyApplication, IphonePresentationDelegate {
         case .medium: apiPriority = .medium
         case .low: apiPriority = .low
         }
-        let updatingTask = DoitSoftwareTestApi.UpdatingTask(token: token, id: editingTask.id, title: editingTask.title, dueBy: Int(editingTask.dueBy.timeIntervalSince1970), priority: apiPriority)
+        let updatingTask = DoitSoftwareTestApi.UpdatingTask(token: token, id: editingTask.id, title: editingTask.title, dueBy: editingTask.dueBy, priority: apiPriority)
         apiInteractor.updateTask(updatingTask: updatingTask) { (result) in
             switch result {
             case .success(let updateTaskResult):

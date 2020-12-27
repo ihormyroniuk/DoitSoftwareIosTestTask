@@ -20,7 +20,9 @@ class UpdateTaskHttpExchange: ApiHttpExchange<UpdatingTask, UpdateTaskResult> {
         headers["Authorization"] = "Bearer \(data.token)"
         var jsonObject: JsonObject = JsonObject()
         jsonObject["title"] = data.title
-        jsonObject["dueBy"] = data.dueBy
+        if let double = data.dueBy?.timeIntervalSince1970 {
+            jsonObject["dueBy"] = Int(double)
+        }
         jsonObject["priority"] = data.priority?.rawValue
         let body = try JSONSerialization.data(jsonValue: jsonObject)
         let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)

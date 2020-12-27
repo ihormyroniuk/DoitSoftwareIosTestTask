@@ -20,7 +20,7 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
         headers["Authorization"] = "Bearer \(data.token)"
         var jsonObject: JsonObject = JsonObject()
         jsonObject["title"] = data.title
-        jsonObject["dueBy"] = data.dueBy
+        jsonObject["dueBy"] = Int(data.dueBy.timeIntervalSince1970)
         jsonObject["priority"] = data.priority.rawValue
         let body = try JSONSerialization.data(jsonValue: jsonObject)
         let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)
@@ -36,7 +36,8 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
             let taskJsonObject = try jsonObject.object("task")
             let id = try taskJsonObject.number("id").int
             let title = try taskJsonObject.string("title")
-            let dueBy = try taskJsonObject.number("dueBy").int
+            let dueByInt = try taskJsonObject.number("dueBy").double
+            let dueBy = Date(timeIntervalSince1970: dueByInt)
             let priorityRawValue = try taskJsonObject.string("priority")
             let optionalPriority = TaskPriority(rawValue: priorityRawValue)
             guard let priority = optionalPriority else {

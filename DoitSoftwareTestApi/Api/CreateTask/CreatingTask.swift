@@ -10,10 +10,10 @@ import Foundation
 public struct CreatingTask {
     let token: String
     let title: String
-    let dueBy: Int
+    let dueBy: Date
     let priority: TaskPriority
     
-    public init(token: String, title: String, dueBy: Int, priority: TaskPriority) {
+    public init(token: String, title: String, dueBy: Date, priority: TaskPriority) {
         self.token = token
         self.title = title
         self.dueBy = dueBy

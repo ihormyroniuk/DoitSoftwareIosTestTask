@@ -168,7 +168,7 @@ class EditTaskScreenController: UIViewController, AUITextViewControllerDidChange
 
     private func setContent() {
         createTaskScreenView.backButton.setTitle(localizer.localizeText("back"), for: .normal)
-        createTaskScreenView.addButton.setTitle(localizer.localizeText("create"), for: .normal)
+        createTaskScreenView.addButton.setTitle(localizer.localizeText("edit"), for: .normal)
         createTaskScreenView.titleLabel.text = localizer.localizeText("title")
         createTaskScreenView.taskTitleLabel.text = localizer.localizeText("taskTitle")
         createTaskScreenView.priorityTitleLabel.text = localizer.localizeText("priorityTitle")

@@ -11,10 +11,10 @@ public struct UpdatingTask {
     let token: String
     let id: Int
     let title: String?
-    let dueBy: Int?
+    let dueBy: Date?
     let priority: TaskPriority?
     
-    public init(token: String, id: Int, title: String?, dueBy: Int?, priority: TaskPriority?) {
+    public init(token: String, id: Int, title: String?, dueBy: Date?, priority: TaskPriority?) {
         self.token = token
         self.id = id
         self.title = title

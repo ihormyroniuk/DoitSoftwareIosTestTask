@@ -7,7 +7,7 @@
 */
 
 "title" = "Edit Task";
-"create" = "Create";
+"edit" = "Edit";
 "back" = "Back";
 "taskTitle" = "Title";
 "priorityTitle" = "Priority";

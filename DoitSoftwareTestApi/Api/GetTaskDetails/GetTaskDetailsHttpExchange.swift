@@ -31,7 +31,8 @@ class GetTaskDetailsHttpExchange: ApiHttpExchange<GettingTaskDetails, GetTaskDet
             let taskJsonObject = try jsonObject.object("task")
             let id = try taskJsonObject.number("id").int
             let title = try taskJsonObject.string("title")
-            let dueBy = try taskJsonObject.number("dueBy").int
+            let dueByInt = try taskJsonObject.number("dueBy").double
+            let dueBy = Date(timeIntervalSince1970: dueByInt)
             let priorityRawValue = try taskJsonObject.string("priority")
             let optionalPriority = TaskPriority(rawValue: priorityRawValue)
             guard let priority = optionalPriority else {
