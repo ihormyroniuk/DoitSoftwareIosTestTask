@@ -34,7 +34,7 @@ class TasksListScreenController: UIViewController, UICollectionViewDataSource, U
     // MARK: Data
 
     private var tasks: [Task] = []
-    private var page: Int = 1
+    private var page: Int = 0
     private var lastDisplayedTaskIndex: Int?
     private lazy var dueByDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -86,7 +86,7 @@ class TasksListScreenController: UIViewController, UICollectionViewDataSource, U
     
     private func refreshList() {
         lastDisplayedTaskIndex = nil
-        page = 0
+        page = 1
         delegate?.tasksListScreenControllerTasksList(self, page: page, completionHandler: { [weak self] (result) in
             guard let self = self else { return }
             self.tasksListScreenView.refreshControl.endRefreshing()
@@ -117,7 +117,7 @@ class TasksListScreenController: UIViewController, UICollectionViewDataSource, U
     
     private func willDisplayTaskAtIndex(_ index: Int) {
         // TODO: Delete in future
-        guard index > 14 else { return }
+        //guard index > 13 else { return }
         if index > lastDisplayedTaskIndex ?? -1 {
             lastDisplayedTaskIndex = index
             if index  == tasks.count - 1 {
