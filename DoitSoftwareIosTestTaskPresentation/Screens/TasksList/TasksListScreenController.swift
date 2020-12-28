@@ -116,8 +116,6 @@ class TasksListScreenController: UIViewController, UICollectionViewDataSource, U
     }
     
     private func willDisplayTaskAtIndex(_ index: Int) {
-        // TODO: Delete in future
-        //guard index > 13 else { return }
         if index > lastDisplayedTaskIndex ?? -1 {
             lastDisplayedTaskIndex = index
             if index  == tasks.count - 1 {
