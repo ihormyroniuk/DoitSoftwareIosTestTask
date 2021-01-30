@@ -10,6 +10,6 @@ import AFoundation
 public enum Interactors {
     public static var interactor: Interactor {
         let host = "testapi.doitserver.in.ua"
-        return UrlSessionSharedInteractor(scheme: Uri.Scheme.https, host: host)
+        return UrlSessionSharedInteractor(scheme: UriScheme.Https.template, host: host)
     }
 }

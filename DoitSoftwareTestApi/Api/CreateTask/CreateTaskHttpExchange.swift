@@ -5,6 +5,7 @@
 //  Created by Ihor Myroniuk on 25.12.2020.
 //
 
+import ASwift
 import AFoundation
 
 class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
@@ -16,7 +17,7 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
         urlComponents.path = "\(basePath)/tasks"
         let uri = try urlComponents.constructUrl()
         var headers: [String: String] = [:]
-        headers[Http.HeaderField.contentType] = MediaTypes.application.json.name
+        headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
         headers["Authorization"] = "Bearer \(data.token)"
         var jsonObject: JsonObject = JsonObject()
         jsonObject["title"] = data.title
@@ -34,9 +35,9 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
             let taskJsonObject = try jsonObject.object("task")
-            let id = try taskJsonObject.number("id").int
+            let id = try taskJsonObject.number("id").int()
             let title = try taskJsonObject.string("title")
-            let dueByInt = try taskJsonObject.number("dueBy").double
+            let dueByInt = try taskJsonObject.number("dueBy").double()
             let dueBy = Date(timeIntervalSince1970: dueByInt)
             let priorityRawValue = try taskJsonObject.string("priority")
             let optionalPriority = TaskPriority(rawValue: priorityRawValue)

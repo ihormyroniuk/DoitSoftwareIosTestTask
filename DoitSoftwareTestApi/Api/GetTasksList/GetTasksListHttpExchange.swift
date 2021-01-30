@@ -5,6 +5,7 @@
 //  Created by Ihor Myroniuk on 25.12.2020.
 //
 
+import ASwift
 import AFoundation
 
 class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListResult> {
@@ -19,7 +20,7 @@ class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListRe
         urlComponents.queryItems = urlQeryItems
         let uri = try urlComponents.constructUrl()
         var headers: [String: String] = [:]
-        headers[Http.HeaderField.contentType] = MediaTypes.application.json.name
+        headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
         headers["Authorization"] = "Bearer \(data.token)"
         let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: nil)
         return httpRequest
@@ -34,9 +35,9 @@ class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListRe
             let tasksJsonArray = try jsonObject.array("tasks").arrayObjects()
             var tasks: [CreatedTask] = []
             for taskJsonObject in tasksJsonArray {
-                let id = try taskJsonObject.number("id").int
+                let id = try taskJsonObject.number("id").int()
                 let title = try taskJsonObject.string("title")
-                let dueByInt = try taskJsonObject.number("dueBy").double
+                let dueByInt = try taskJsonObject.number("dueBy").double()
                 let dueBy = Date(timeIntervalSince1970: dueByInt)
                 let priorityRawValue = try taskJsonObject.string("priority")
                 let optionalPriority = TaskPriority(rawValue: priorityRawValue)
@@ -48,9 +49,9 @@ class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListRe
                 tasks.append(task)
             }
             let metaJsonObject = try jsonObject.object("meta")
-            let current = try metaJsonObject.number("current").int
-            let limit = try metaJsonObject.number("limit").int
-            let count = try metaJsonObject.number("count").int
+            let current = try metaJsonObject.number("current").int()
+            let limit = try metaJsonObject.number("limit").int()
+            let count = try metaJsonObject.number("count").int()
             let meta = Meta(current: current, limit: limit, count: count)
             let gettedTasksList = GettedTasksList(tasks: tasks, meta: meta)
             return .gettedTasksList(gettedTasksList)

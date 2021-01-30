@@ -8,6 +8,7 @@
 import AFoundation
 
 class AddNewUserHttpExchange: ApiHttpExchange<AddingNewUser, AddNewUserResult> {
+    
     override func constructHttpRequest(data: AddingNewUser) throws -> HttpRequest {
         let method = Http.Method.post
         var urlComponents = URLComponents()
@@ -16,7 +17,7 @@ class AddNewUserHttpExchange: ApiHttpExchange<AddingNewUser, AddNewUserResult> {
         urlComponents.path = "\(basePath)/users"
         let uri = try urlComponents.constructUrl()
         var headers: [String: String] = [:]
-        headers[Http.HeaderField.contentType] = MediaTypes.application.json.name
+        headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
         var jsonObject: JsonObject = JsonObject()
         jsonObject["email"] = data.email
         jsonObject["password"] = data.password
@@ -45,4 +46,5 @@ class AddNewUserHttpExchange: ApiHttpExchange<AddingNewUser, AddNewUserResult> {
             throw error
         }
     }
+    
 }

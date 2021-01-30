@@ -16,7 +16,7 @@ class UpdateTaskHttpExchange: ApiHttpExchange<UpdatingTask, UpdateTaskResult> {
         urlComponents.path = "\(basePath)/tasks/\(data.id)"
         let uri = try urlComponents.constructUrl()
         var headers: [String: String] = [:]
-        headers[Http.HeaderField.contentType] = MediaTypes.application.json.name
+        headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
         headers["Authorization"] = "Bearer \(data.token)"
         var jsonObject: JsonObject = JsonObject()
         jsonObject["title"] = data.title

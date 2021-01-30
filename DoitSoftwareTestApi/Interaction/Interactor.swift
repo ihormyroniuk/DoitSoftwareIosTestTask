@@ -8,6 +8,7 @@
 import Foundation
 
 public protocol Interactor {
+    
     func addNewUser(addingNewUser: AddingNewUser, completionHandler: @escaping (Result<AddNewUserResult, InteractionError>) -> ())
     func authorizeUserByCredentials(authorizingUserByCredentials: AddingNewUser, completionHandler: @escaping (Result<AuthorizeUserByCredentialsResult, InteractionError>) -> ())
     func createTask(creatingTask: CreatingTask, completionHandler: @escaping (Result<CreateTaskResult, InteractionError>) -> ())
@@ -15,4 +16,5 @@ public protocol Interactor {
     func getTaskDetails(gettingTaskDetails: GettingTaskDetails, completionHandler: @escaping (Result<GetTaskDetailsResult, InteractionError>) -> ())
     func updateTask(updatingTask: UpdatingTask, completionHandler: @escaping (Result<UpdateTaskResult, InteractionError>) -> ())
     func deleteTask(deletingTask: GettingTaskDetails, completionHandler: @escaping (Result<DeleteTaskResult, InteractionError>) -> ())
+    
 }

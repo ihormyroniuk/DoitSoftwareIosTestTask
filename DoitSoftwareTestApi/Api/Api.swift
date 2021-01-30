@@ -7,10 +7,8 @@
 
 import Foundation
 
-
-import Foundation
-
 class Api {
+    
     private let scheme: String
     private let host: String
     
@@ -53,4 +51,5 @@ class Api {
         let httpExchange = UpdateTaskHttpExchange(scheme: scheme, host: host)
         return httpExchange
     }
+    
 }

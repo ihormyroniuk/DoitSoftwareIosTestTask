@@ -16,7 +16,7 @@ class AuthorizeUserByCredentialsHttpExchange: ApiHttpExchange<AddingNewUser, Aut
         urlComponents.path = "\(basePath)/auth"
         let uri = try urlComponents.constructUrl()
         var headers: [String: String] = [:]
-        headers[Http.HeaderField.contentType] = MediaTypes.application.json.name
+        headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
         var jsonObject: JsonObject = JsonObject()
         jsonObject["email"] = data.email
         jsonObject["password"] = data.password

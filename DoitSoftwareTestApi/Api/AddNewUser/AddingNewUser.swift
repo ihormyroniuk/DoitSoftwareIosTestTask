@@ -8,6 +8,7 @@
 import Foundation
 
 public struct AddingNewUser {
+    
     let email: String
     let password: String
     
@@ -15,4 +16,5 @@ public struct AddingNewUser {
         self.email = email
         self.password = password
     }
+    
 }

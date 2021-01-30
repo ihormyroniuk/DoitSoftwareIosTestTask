@@ -1,31 +1,40 @@
 PODS:
-  - AFoundation (0.1.2)
+  - AFoundation (0.1.3)
+  - ASwift (1.0.0)
   - AUIKit (1.0.0)
 
 DEPENDENCIES:
-  - AFoundation (from `https://github.com/ihormyroniuk/AFoundation`, commit `2c1f537e7a908577782f67a8d6323f57fb92b2ca`)
+  - AFoundation (from `https://github.com/ihormyroniuk/AFoundation`, commit `0698eb46dc492a50608d3ea97e81f45e81fca1ef`)
+  - ASwift (from `https://github.com/ihormyroniuk/ASwift`, commit `e496511f1324569c2bd61065c426979988ff2cc0`)
   - AUIKit (from `https://github.com/ihormyroniuk/AUIKit`, commit `adc47d9bf7e231a13dc7927b5928086e48f2ee67`)
 
 EXTERNAL SOURCES:
   AFoundation:
-    :commit: 2c1f537e7a908577782f67a8d6323f57fb92b2ca
+    :commit: 0698eb46dc492a50608d3ea97e81f45e81fca1ef
     :git: https://github.com/ihormyroniuk/AFoundation
+  ASwift:
+    :commit: e496511f1324569c2bd61065c426979988ff2cc0
+    :git: https://github.com/ihormyroniuk/ASwift
   AUIKit:
     :commit: adc47d9bf7e231a13dc7927b5928086e48f2ee67
     :git: https://github.com/ihormyroniuk/AUIKit
 
 CHECKOUT OPTIONS:
   AFoundation:
-    :commit: 2c1f537e7a908577782f67a8d6323f57fb92b2ca
+    :commit: 0698eb46dc492a50608d3ea97e81f45e81fca1ef
     :git: https://github.com/ihormyroniuk/AFoundation
+  ASwift:
+    :commit: e496511f1324569c2bd61065c426979988ff2cc0
+    :git: https://github.com/ihormyroniuk/ASwift
   AUIKit:
     :commit: adc47d9bf7e231a13dc7927b5928086e48f2ee67
     :git: https://github.com/ihormyroniuk/AUIKit
 
 SPEC CHECKSUMS:
-  AFoundation: 92592f523d7a2d8748e77dd649047abba07a17fd
+  AFoundation: b395b4e2cb156715b6a4c55182c801bef1a5e810
+  ASwift: 5e31a0937e215a4d2cedd23f765b3683276a6a79
   AUIKit: 1f146cf9d07e7241c2318521cfea313467732d34
 
-PODFILE CHECKSUM: 63cef012105af4ad772d3b0b911354b837551a6e
+PODFILE CHECKSUM: a9bc533dbb59b504cad58a31b6c4662d5f6f0c3d
 
 COCOAPODS: 1.9.1

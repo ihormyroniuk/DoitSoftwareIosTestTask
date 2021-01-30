@@ -8,6 +8,7 @@
 import AFoundation
 
 class DeleteTaskHttpExchange: ApiHttpExchange<GettingTaskDetails, DeleteTaskResult> {
+    
     override func constructHttpRequest(data: GettingTaskDetails) throws -> HttpRequest {
         let method = Http.Method.delete
         var urlComponents = URLComponents()
@@ -16,7 +17,7 @@ class DeleteTaskHttpExchange: ApiHttpExchange<GettingTaskDetails, DeleteTaskResu
         urlComponents.path = "\(basePath)/tasks/\(data.task)"
         let uri = try urlComponents.constructUrl()
         var headers: [String: String] = [:]
-        headers[Http.HeaderField.contentType] = MediaTypes.application.json.name
+        headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
         headers["Authorization"] = "Bearer \(data.token)"
         let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: nil)
         return httpRequest
@@ -37,4 +38,5 @@ class DeleteTaskHttpExchange: ApiHttpExchange<GettingTaskDetails, DeleteTaskResu
             throw error
         }
     }
+    
 }

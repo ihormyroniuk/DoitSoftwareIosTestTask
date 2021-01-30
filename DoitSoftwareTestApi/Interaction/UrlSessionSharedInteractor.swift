@@ -5,10 +5,11 @@
 //  Created by Ihor Myroniuk on 25.12.2020.
 //
 
-
+import ASwift
 import AFoundation
 
 class UrlSessionSharedInteractor: Interactor {
+    
     private let session = URLSession.shared
     private let api: Api
     
@@ -219,4 +220,5 @@ class UrlSessionSharedInteractor: Interactor {
         }
         dataTask.resume()
     }
+    
 }
