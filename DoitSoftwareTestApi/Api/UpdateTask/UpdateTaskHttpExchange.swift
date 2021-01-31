@@ -9,7 +9,7 @@ import AFoundation
 
 class UpdateTaskHttpExchange: ApiHttpExchange<UpdatingTask, UpdateTaskResult> {
     override func constructHttpRequest(data: UpdatingTask) throws -> HttpRequest {
-        let method = Http.Method.put
+        let method = HttpRequest.Method.put
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -31,9 +31,9 @@ class UpdateTaskHttpExchange: ApiHttpExchange<UpdatingTask, UpdateTaskResult> {
     
     override func parseHttpResponse(httpResponse: HttpResponse) throws -> UpdateTaskResult {
         let code = httpResponse.code
-        if code == Http.Code.accepted {
+        if code == HttpResponse.Code.accepted {
             return .updatedTask
-        } else if code == Http.Code.unauthorized {
+        } else if code == HttpResponse.Code.unauthorized {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
@@ -46,7 +46,7 @@ class UpdateTaskHttpExchange: ApiHttpExchange<UpdatingTask, UpdateTaskResult> {
             let message = try jsonObject.string("message")
             return .validationFailed(message)
         } else {
-            let error = UnexpectedHttpResponseStatusCodeError(code: code)
+            let error = UnexpectedHttpResponseCodeError(code: code)
             throw error
         }
     }

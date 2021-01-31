@@ -10,7 +10,7 @@ import AFoundation
 class DeleteTaskHttpExchange: ApiHttpExchange<GettingTaskDetails, DeleteTaskResult> {
     
     override func constructHttpRequest(data: GettingTaskDetails) throws -> HttpRequest {
-        let method = Http.Method.delete
+        let method = HttpRequest.Method.delete
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -25,16 +25,16 @@ class DeleteTaskHttpExchange: ApiHttpExchange<GettingTaskDetails, DeleteTaskResu
     
     override func parseHttpResponse(httpResponse: HttpResponse) throws -> DeleteTaskResult {
         let code = httpResponse.code
-        if code == Http.Code.accepted {
+        if code == HttpResponse.Code.accepted {
             return .deletedTask
-        } else if code == Http.Code.unauthorized {
+        } else if code == HttpResponse.Code.unauthorized {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
             let message = try jsonObject.string("message")
             return .unauthorized(message)
         } else {
-            let error = UnexpectedHttpResponseStatusCodeError(code: code)
+            let error = UnexpectedHttpResponseCodeError(code: code)
             throw error
         }
     }

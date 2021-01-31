@@ -9,7 +9,7 @@ import AFoundation
 
 class AuthorizeUserByCredentialsHttpExchange: ApiHttpExchange<AddingNewUser, AuthorizeUserByCredentialsResult> {
     override func constructHttpRequest(data: AddingNewUser) throws -> HttpRequest {
-        let method = Http.Method.post
+        let method = HttpRequest.Method.post
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -27,14 +27,14 @@ class AuthorizeUserByCredentialsHttpExchange: ApiHttpExchange<AddingNewUser, Aut
     
     override func parseHttpResponse(httpResponse: HttpResponse) throws -> AuthorizeUserByCredentialsResult {
         let code = httpResponse.code
-        if code == Http.Code.ok {
+        if code == HttpResponse.Code.ok {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
             let token = try jsonObject.string("token")
             let addedNewUser = AddedNewUser(token: token)
             return .authorizeUserByCredentials(addedNewUser)
-        } else if code == Http.Code.forbidden {
+        } else if code == HttpResponse.Code.forbidden {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
@@ -47,7 +47,7 @@ class AuthorizeUserByCredentialsHttpExchange: ApiHttpExchange<AddingNewUser, Aut
             let message = try jsonObject.string("message")
             return .validationFailed(message)
         } else {
-            let error = UnexpectedHttpResponseStatusCodeError(code: code)
+            let error = UnexpectedHttpResponseCodeError(code: code)
             throw error
         }
     }

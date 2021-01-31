@@ -31,7 +31,7 @@ class UrlSessionSharedInteractor: Interactor {
                 let interactionError = InteractionError(error: error)
                 completionHandler(.failure(interactionError))
             } else if let httpUrlResponse = response as? HTTPURLResponse {
-                let httpResponse = HttpResponse(httpUrlResponse: httpUrlResponse, data: data)
+                let httpResponse = httpUrlResponse.httpResponse(data: data)
                 let response: AddNewUserResult
                 do { response = try httpExchange.parseHttpResponse(httpResponse: httpResponse) } catch {
                     let error = UnexpectedHttpExchangeError(httpRequest: httpRequest, httpResponse: httpResponse, error: error)
@@ -60,7 +60,7 @@ class UrlSessionSharedInteractor: Interactor {
                 let interactionError = InteractionError(error: error)
                 completionHandler(.failure(interactionError))
             } else if let httpUrlResponse = response as? HTTPURLResponse {
-                let httpResponse = HttpResponse(httpUrlResponse: httpUrlResponse, data: data)
+                let httpResponse = httpUrlResponse.httpResponse(data: data)
                 let response: AuthorizeUserByCredentialsResult
                 do { response = try httpExchange.parseHttpResponse(httpResponse: httpResponse) } catch {
                     let error = UnexpectedHttpExchangeError(httpRequest: httpRequest, httpResponse: httpResponse, error: error)
@@ -89,7 +89,7 @@ class UrlSessionSharedInteractor: Interactor {
                 let interactionError = InteractionError(error: error)
                 completionHandler(.failure(interactionError))
             } else if let httpUrlResponse = response as? HTTPURLResponse {
-                let httpResponse = HttpResponse(httpUrlResponse: httpUrlResponse, data: data)
+                let httpResponse = httpUrlResponse.httpResponse(data: data)
                 let response: CreateTaskResult
                 do { response = try httpExchange.parseHttpResponse(httpResponse: httpResponse) } catch {
                     let error = UnexpectedHttpExchangeError(httpRequest: httpRequest, httpResponse: httpResponse, error: error)
@@ -118,7 +118,7 @@ class UrlSessionSharedInteractor: Interactor {
                 let interactionError = InteractionError(error: error)
                 completionHandler(.failure(interactionError))
             } else if let httpUrlResponse = response as? HTTPURLResponse {
-                let httpResponse = HttpResponse(httpUrlResponse: httpUrlResponse, data: data)
+                let httpResponse = httpUrlResponse.httpResponse(data: data)
                 let response: GetTasksListResult
                 do { response = try httpExchange.parseHttpResponse(httpResponse: httpResponse) } catch {
                     let error = UnexpectedHttpExchangeError(httpRequest: httpRequest, httpResponse: httpResponse, error: error)
@@ -147,7 +147,7 @@ class UrlSessionSharedInteractor: Interactor {
                 let interactionError = InteractionError(error: error)
                 completionHandler(.failure(interactionError))
             } else if let httpUrlResponse = response as? HTTPURLResponse {
-                let httpResponse = HttpResponse(httpUrlResponse: httpUrlResponse, data: data)
+                let httpResponse = httpUrlResponse.httpResponse(data: data)
                 let response: GetTaskDetailsResult
                 do { response = try httpExchange.parseHttpResponse(httpResponse: httpResponse) } catch {
                     let error = UnexpectedHttpExchangeError(httpRequest: httpRequest, httpResponse: httpResponse, error: error)
@@ -176,7 +176,7 @@ class UrlSessionSharedInteractor: Interactor {
                 let interactionError = InteractionError(error: error)
                 completionHandler(.failure(interactionError))
             } else if let httpUrlResponse = response as? HTTPURLResponse {
-                let httpResponse = HttpResponse(httpUrlResponse: httpUrlResponse, data: data)
+                let httpResponse = httpUrlResponse.httpResponse(data: data)
                 let response: UpdateTaskResult
                 do { response = try httpExchange.parseHttpResponse(httpResponse: httpResponse) } catch {
                     let error = UnexpectedHttpExchangeError(httpRequest: httpRequest, httpResponse: httpResponse, error: error)
@@ -205,7 +205,7 @@ class UrlSessionSharedInteractor: Interactor {
                 let interactionError = InteractionError(error: error)
                 completionHandler(.failure(interactionError))
             } else if let httpUrlResponse = response as? HTTPURLResponse {
-                let httpResponse = HttpResponse(httpUrlResponse: httpUrlResponse, data: data)
+                let httpResponse = httpUrlResponse.httpResponse(data: data)
                 let response: DeleteTaskResult
                 do { response = try httpExchange.parseHttpResponse(httpResponse: httpResponse) } catch {
                     let error = UnexpectedHttpExchangeError(httpRequest: httpRequest, httpResponse: httpResponse, error: error)

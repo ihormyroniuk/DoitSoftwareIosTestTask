@@ -10,7 +10,7 @@ import AFoundation
 
 class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListResult> {
     override func constructHttpRequest(data: GettingTasksList) throws -> HttpRequest {
-        let method = Http.Method.get
+        let method = HttpRequest.Method.get
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -28,7 +28,7 @@ class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListRe
     
     override func parseHttpResponse(httpResponse: HttpResponse) throws -> GetTasksListResult {
         let code = httpResponse.code
-        if code == Http.Code.ok {
+        if code == HttpResponse.Code.ok {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
@@ -55,14 +55,14 @@ class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListRe
             let meta = Meta(current: current, limit: limit, count: count)
             let gettedTasksList = GettedTasksList(tasks: tasks, meta: meta)
             return .gettedTasksList(gettedTasksList)
-        } else if code == Http.Code.unauthorized {
+        } else if code == HttpResponse.Code.unauthorized {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
             let message = try jsonObject.string("message")
             return .unauthorized(message)
         } else {
-            let error = UnexpectedHttpResponseStatusCodeError(code: code)
+            let error = UnexpectedHttpResponseCodeError(code: code)
             throw error
         }
     }

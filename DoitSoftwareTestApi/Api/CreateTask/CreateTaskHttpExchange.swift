@@ -10,7 +10,7 @@ import AFoundation
 
 class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
     override func constructHttpRequest(data: CreatingTask) throws -> HttpRequest {
-        let method = Http.Method.post
+        let method = HttpRequest.Method.post
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -30,7 +30,7 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
     
     override func parseHttpResponse(httpResponse: HttpResponse) throws -> CreateTaskResult {
         let code = httpResponse.code
-        if code == Http.Code.created {
+        if code == HttpResponse.Code.created {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
@@ -47,7 +47,7 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
             }
             let createdTask = CreatedTask(id: id, title: title, dueBy: dueBy, priority: priority)
             return .createdTaskResult(createdTask)
-        } else if code == Http.Code.unauthorized {
+        } else if code == HttpResponse.Code.unauthorized {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
@@ -60,7 +60,7 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
             let message = try jsonObject.string("message")
             return .validationFailed(message)
         } else {
-            let error = UnexpectedHttpResponseStatusCodeError(code: code)
+            let error = UnexpectedHttpResponseCodeError(code: code)
             throw error
         }
     }
