@@ -7,6 +7,6 @@
 
 import AFoundation
 
-class ApiHttpExchange<HttpRequestData, ParsedHttpResponse>: SchemeHostHttpExchange<HttpRequestData, ParsedHttpResponse> {
+class ApiHttpExchange<HttpRequestData, ParsedHttpResponse>: Http.SchemeHostExchange<HttpRequestData, ParsedHttpResponse> {
     let basePath: String = "/api"
 }

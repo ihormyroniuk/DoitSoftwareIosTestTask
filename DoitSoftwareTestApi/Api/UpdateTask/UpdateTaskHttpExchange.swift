@@ -8,8 +8,8 @@
 import AFoundation
 
 class UpdateTaskHttpExchange: ApiHttpExchange<UpdatingTask, UpdateTaskResult> {
-    override func constructHttpRequest(data: UpdatingTask) throws -> HttpRequest {
-        let method = HttpRequest.Method.put
+    override func constructHttpRequest(data: UpdatingTask) throws -> Http.Request {
+        let method = Http.Request.Method.put
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -25,15 +25,15 @@ class UpdateTaskHttpExchange: ApiHttpExchange<UpdatingTask, UpdateTaskResult> {
         }
         jsonObject["priority"] = data.priority?.rawValue
         let body = try JSONSerialization.data(jsonValue: jsonObject)
-        let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)
+        let httpRequest = Http.Request(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)
         return httpRequest
     }
     
-    override func parseHttpResponse(httpResponse: HttpResponse) throws -> UpdateTaskResult {
+    override func parseHttpResponse(httpResponse: Http.Response) throws -> UpdateTaskResult {
         let code = httpResponse.code
-        if code == HttpResponse.Code.accepted {
+        if code == Http.Response.Code.accepted {
             return .updatedTask
-        } else if code == HttpResponse.Code.unauthorized {
+        } else if code == Http.Response.Code.unauthorized {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()

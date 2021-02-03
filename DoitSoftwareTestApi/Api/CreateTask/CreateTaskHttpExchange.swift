@@ -9,8 +9,8 @@ import ASwift
 import AFoundation
 
 class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
-    override func constructHttpRequest(data: CreatingTask) throws -> HttpRequest {
-        let method = HttpRequest.Method.post
+    override func constructHttpRequest(data: CreatingTask) throws -> Http.Request {
+        let method = Http.Request.Method.post
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -24,13 +24,13 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
         jsonObject["dueBy"] = Int(data.dueBy.timeIntervalSince1970)
         jsonObject["priority"] = data.priority.rawValue
         let body = try JSONSerialization.data(jsonValue: jsonObject)
-        let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)
+        let httpRequest = Http.Request(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)
         return httpRequest
     }
     
-    override func parseHttpResponse(httpResponse: HttpResponse) throws -> CreateTaskResult {
+    override func parseHttpResponse(httpResponse: Http.Response) throws -> CreateTaskResult {
         let code = httpResponse.code
-        if code == HttpResponse.Code.created {
+        if code == Http.Response.Code.created {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
@@ -47,7 +47,7 @@ class CreateTaskHttpExchange: ApiHttpExchange<CreatingTask, CreateTaskResult> {
             }
             let createdTask = CreatedTask(id: id, title: title, dueBy: dueBy, priority: priority)
             return .createdTaskResult(createdTask)
-        } else if code == HttpResponse.Code.unauthorized {
+        } else if code == Http.Response.Code.unauthorized {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()

@@ -9,8 +9,8 @@ import AFoundation
 
 class DeleteTaskHttpExchange: ApiHttpExchange<GettingTaskDetails, DeleteTaskResult> {
     
-    override func constructHttpRequest(data: GettingTaskDetails) throws -> HttpRequest {
-        let method = HttpRequest.Method.delete
+    override func constructHttpRequest(data: GettingTaskDetails) throws -> Http.Request {
+        let method = Http.Request.Method.delete
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -19,15 +19,15 @@ class DeleteTaskHttpExchange: ApiHttpExchange<GettingTaskDetails, DeleteTaskResu
         var headers: [String: String] = [:]
         headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
         headers["Authorization"] = "Bearer \(data.token)"
-        let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: nil)
+        let httpRequest = Http.Request(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: nil)
         return httpRequest
     }
     
-    override func parseHttpResponse(httpResponse: HttpResponse) throws -> DeleteTaskResult {
+    override func parseHttpResponse(httpResponse: Http.Response) throws -> DeleteTaskResult {
         let code = httpResponse.code
-        if code == HttpResponse.Code.accepted {
+        if code == Http.Response.Code.accepted {
             return .deletedTask
-        } else if code == HttpResponse.Code.unauthorized {
+        } else if code == Http.Response.Code.unauthorized {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()

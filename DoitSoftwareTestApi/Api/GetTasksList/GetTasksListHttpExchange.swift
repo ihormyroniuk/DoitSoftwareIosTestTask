@@ -9,8 +9,8 @@ import ASwift
 import AFoundation
 
 class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListResult> {
-    override func constructHttpRequest(data: GettingTasksList) throws -> HttpRequest {
-        let method = HttpRequest.Method.get
+    override func constructHttpRequest(data: GettingTasksList) throws -> Http.Request {
+        let method = Http.Request.Method.get
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -22,13 +22,13 @@ class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListRe
         var headers: [String: String] = [:]
         headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
         headers["Authorization"] = "Bearer \(data.token)"
-        let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: nil)
+        let httpRequest = Http.Request(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: nil)
         return httpRequest
     }
     
-    override func parseHttpResponse(httpResponse: HttpResponse) throws -> GetTasksListResult {
+    override func parseHttpResponse(httpResponse: Http.Response) throws -> GetTasksListResult {
         let code = httpResponse.code
-        if code == HttpResponse.Code.ok {
+        if code == Http.Response.Code.ok {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
@@ -55,7 +55,7 @@ class GetTasksListHttpExchange: ApiHttpExchange<GettingTasksList, GetTasksListRe
             let meta = Meta(current: current, limit: limit, count: count)
             let gettedTasksList = GettedTasksList(tasks: tasks, meta: meta)
             return .gettedTasksList(gettedTasksList)
-        } else if code == HttpResponse.Code.unauthorized {
+        } else if code == Http.Response.Code.unauthorized {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()

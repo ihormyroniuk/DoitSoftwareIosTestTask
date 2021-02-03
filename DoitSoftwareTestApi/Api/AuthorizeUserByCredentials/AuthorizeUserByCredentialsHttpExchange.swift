@@ -8,8 +8,8 @@
 import AFoundation
 
 class AuthorizeUserByCredentialsHttpExchange: ApiHttpExchange<AddingNewUser, AuthorizeUserByCredentialsResult> {
-    override func constructHttpRequest(data: AddingNewUser) throws -> HttpRequest {
-        let method = HttpRequest.Method.post
+    override func constructHttpRequest(data: AddingNewUser) throws -> Http.Request {
+        let method = Http.Request.Method.post
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -21,20 +21,20 @@ class AuthorizeUserByCredentialsHttpExchange: ApiHttpExchange<AddingNewUser, Aut
         jsonObject["email"] = data.email
         jsonObject["password"] = data.password
         let body = try JSONSerialization.data(jsonValue: jsonObject)
-        let httpRequest = HttpRequest(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)
+        let httpRequest = Http.Request(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)
         return httpRequest
     }
     
-    override func parseHttpResponse(httpResponse: HttpResponse) throws -> AuthorizeUserByCredentialsResult {
+    override func parseHttpResponse(httpResponse: Http.Response) throws -> AuthorizeUserByCredentialsResult {
         let code = httpResponse.code
-        if code == HttpResponse.Code.ok {
+        if code == Http.Response.Code.ok {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
             let token = try jsonObject.string("token")
             let addedNewUser = AddedNewUser(token: token)
             return .authorizeUserByCredentials(addedNewUser)
-        } else if code == HttpResponse.Code.forbidden {
+        } else if code == Http.Response.Code.forbidden {
             let body = httpResponse.body ?? Data()
             let jsonValue = try JSONSerialization.json(data: body)
             let jsonObject = try jsonValue.object()
