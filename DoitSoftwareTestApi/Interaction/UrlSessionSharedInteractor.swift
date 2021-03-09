@@ -18,39 +18,74 @@ class UrlSessionSharedInteractor: Interactor {
         self.api = api
     }
     
-    public func addNewUser(addingNewUser: AddingNewUser, completionHandler: @escaping (Result<AddNewUserResult, DataTaskError>) -> ()) {
+    public func addNewUser(addingNewUser: AddingNewUser, completionHandler: @escaping (Result<AddNewUserResult, URLSessionTask.Error>) -> ()) {
         let httpExchange = api.addNewUser()
-        session.dataTask(httpExchange: httpExchange, data: addingNewUser, completionHandler: completionHandler)
+        let dataTask: URLSessionDataTask
+        do { dataTask = try session.httpExchangeDataTask(httpExchange, requestData: addingNewUser, completionHandler: completionHandler) } catch {
+            completionHandler(.failure(.unexpectedError(error)))
+            return
+        }
+        dataTask.resume()
     }
     
-    func authorizeUserByCredentials(authorizingUserByCredentials: AddingNewUser, completionHandler: @escaping (Result<AuthorizeUserByCredentialsResult, DataTaskError>) -> ()) {
+    func authorizeUserByCredentials(authorizingUserByCredentials: AddingNewUser, completionHandler: @escaping (Result<AuthorizeUserByCredentialsResult, URLSessionTask.Error>) -> ()) {
         let httpExchange = api.authorizeUserByCredentials()
-        session.dataTask(httpExchange: httpExchange, data: authorizingUserByCredentials, completionHandler: completionHandler)
+        let dataTask: URLSessionDataTask
+        do { dataTask = try session.httpExchangeDataTask(httpExchange, requestData: authorizingUserByCredentials, completionHandler: completionHandler) } catch {
+            completionHandler(.failure(.unexpectedError(error)))
+            return
+        }
+        dataTask.resume()
     }
     
-    func createTask(creatingTask: CreatingTask, completionHandler: @escaping (Result<CreateTaskResult, DataTaskError>) -> ()) {
+    func createTask(creatingTask: CreatingTask, completionHandler: @escaping (Result<CreateTaskResult, URLSessionTask.Error>) -> ()) {
         let httpExchange = api.createTask()
-        session.dataTask(httpExchange: httpExchange, data: creatingTask, completionHandler: completionHandler)
+        let dataTask: URLSessionDataTask
+        do { dataTask = try session.httpExchangeDataTask(httpExchange, requestData: creatingTask, completionHandler: completionHandler) } catch {
+            completionHandler(.failure(.unexpectedError(error)))
+            return
+        }
+        dataTask.resume()
     }
     
-    func getTasksList(gettingTasksList: GettingTasksList, completionHandler: @escaping (Result<GetTasksListResult, DataTaskError>) -> ()) {
+    func getTasksList(gettingTasksList: GettingTasksList, completionHandler: @escaping (Result<GetTasksListResult, URLSessionTask.Error>) -> ()) {
         let httpExchange = api.getTasksList()
-        session.dataTask(httpExchange: httpExchange, data: gettingTasksList, completionHandler: completionHandler)
+        let dataTask: URLSessionDataTask
+        do { dataTask = try session.httpExchangeDataTask(httpExchange, requestData: gettingTasksList, completionHandler: completionHandler) } catch {
+            completionHandler(.failure(.unexpectedError(error)))
+            return
+        }
+        dataTask.resume()
     }
     
-    func getTaskDetails(gettingTaskDetails: GettingTaskDetails, completionHandler: @escaping (Result<GetTaskDetailsResult, DataTaskError>) -> ()) {
+    func getTaskDetails(gettingTaskDetails: GettingTaskDetails, completionHandler: @escaping (Result<GetTaskDetailsResult, URLSessionTask.Error>) -> ()) {
         let httpExchange = api.getTaskDetails()
-        session.dataTask(httpExchange: httpExchange, data: gettingTaskDetails, completionHandler: completionHandler)
+        let dataTask: URLSessionDataTask
+        do { dataTask = try session.httpExchangeDataTask(httpExchange, requestData: gettingTaskDetails, completionHandler: completionHandler) } catch {
+            completionHandler(.failure(.unexpectedError(error)))
+            return
+        }
+        dataTask.resume()
     }
     
-    func updateTask(updatingTask: UpdatingTask, completionHandler: @escaping (Result<UpdateTaskResult, DataTaskError>) -> ()) {
+    func updateTask(updatingTask: UpdatingTask, completionHandler: @escaping (Result<UpdateTaskResult, URLSessionTask.Error>) -> ()) {
         let httpExchange = api.updateTask()
-        session.dataTask(httpExchange: httpExchange, data: updatingTask, completionHandler: completionHandler)
+        let dataTask: URLSessionDataTask
+        do { dataTask = try session.httpExchangeDataTask(httpExchange, requestData: updatingTask, completionHandler: completionHandler) } catch {
+            completionHandler(.failure(.unexpectedError(error)))
+            return
+        }
+        dataTask.resume()
     }
     
-    func deleteTask(deletingTask: GettingTaskDetails, completionHandler: @escaping (Result<DeleteTaskResult, DataTaskError>) -> ()) {
+    func deleteTask(deletingTask: GettingTaskDetails, completionHandler: @escaping (Result<DeleteTaskResult, URLSessionTask.Error>) -> ()) {
         let httpExchange = api.deleteTask()
-        session.dataTask(httpExchange: httpExchange, data: deletingTask, completionHandler: completionHandler)
+        let dataTask: URLSessionDataTask
+        do { dataTask = try session.httpExchangeDataTask(httpExchange, requestData: deletingTask, completionHandler: completionHandler) } catch {
+            completionHandler(.failure(.unexpectedError(error)))
+            return
+        }
+        dataTask.resume()
     }
     
 }
