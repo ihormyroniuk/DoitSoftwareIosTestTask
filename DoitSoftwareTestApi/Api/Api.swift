@@ -17,38 +17,38 @@ class Api {
         self.host = host
     }
     
-    func addNewUser() -> AddNewUserHttpExchange {
-        let httpExchange = AddNewUserHttpExchange(scheme: scheme, host: host)
+    func addNewUser(requestData: AddingNewUser) -> AddNewUserHttpExchange {
+        let httpExchange = AddNewUserHttpExchange(scheme: scheme, host: host, requestData: requestData)
         return httpExchange
     }
     
-    func authorizeUserByCredentials() -> AuthorizeUserByCredentialsHttpExchange {
-        let httpExchange = AuthorizeUserByCredentialsHttpExchange(scheme: scheme, host: host)
+    func authorizeUserByCredentials(requestData: AddingNewUser) -> AuthorizeUserByCredentialsHttpExchange {
+        let httpExchange = AuthorizeUserByCredentialsHttpExchange(scheme: scheme, host: host, requestData: requestData)
         return httpExchange
     }
     
-    func createTask() -> CreateTaskHttpExchange {
-        let httpExchange = CreateTaskHttpExchange(scheme: scheme, host: host)
+    func createTask(requestData: CreatingTask) -> CreateTaskHttpExchange {
+        let httpExchange = CreateTaskHttpExchange(scheme: scheme, host: host, requestData: requestData)
         return httpExchange
     }
     
-    func getTasksList() -> GetTasksListHttpExchange {
-        let httpExchange = GetTasksListHttpExchange(scheme: scheme, host: host)
+    func getTasksList(requestData: GettingTasksList) -> GetTasksListHttpExchange {
+        let httpExchange = GetTasksListHttpExchange(scheme: scheme, host: host, requestData: requestData)
         return httpExchange
     }
     
-    func getTaskDetails() -> GetTaskDetailsHttpExchange {
-        let httpExchange = GetTaskDetailsHttpExchange(scheme: scheme, host: host)
+    func getTaskDetails(requestData: GettingTaskDetails) -> GetTaskDetailsHttpExchange {
+        let httpExchange = GetTaskDetailsHttpExchange(scheme: scheme, host: host, requestData: requestData)
         return httpExchange
     }
     
-    func deleteTask() -> DeleteTaskHttpExchange {
-        let httpExchange = DeleteTaskHttpExchange(scheme: scheme, host: host)
+    func deleteTask(requestData: GettingTaskDetails) -> DeleteTaskHttpExchange {
+        let httpExchange = DeleteTaskHttpExchange(scheme: scheme, host: host, requestData: requestData)
         return httpExchange
     }
     
-    func updateTask() -> UpdateTaskHttpExchange {
-        let httpExchange = UpdateTaskHttpExchange(scheme: scheme, host: host)
+    func updateTask(requestData: UpdatingTask) -> UpdateTaskHttpExchange {
+        let httpExchange = UpdateTaskHttpExchange(scheme: scheme, host: host, requestData: requestData)
         return httpExchange
     }
     

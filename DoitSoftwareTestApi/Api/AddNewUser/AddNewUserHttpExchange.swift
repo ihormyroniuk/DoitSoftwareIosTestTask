@@ -9,40 +9,40 @@ import AFoundation
 
 class AddNewUserHttpExchange: ApiHttpExchange<AddingNewUser, AddNewUserResult> {
     
-    override func constructHttpRequest(data: AddingNewUser) throws -> Http.Request {
-        let method = Http.Request.Method.post
+    override func constructRequest() throws -> HttpRequest {
+        let method = HttpRequestMethod.post
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
         urlComponents.path = "\(basePath)/users"
-        let uri = try urlComponents.constructUrl()
+        let uri = try urlComponents.url()
         var headers: [String: String] = [:]
-        headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
-        var jsonObject: JsonObject = JsonObject()
-        jsonObject["email"] = data.email
-        jsonObject["password"] = data.password
-        let body = try JSONSerialization.data(jsonValue: jsonObject)
-        let httpRequest = Http.Request(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: body)
+        headers[HttpHeaderField.contentType] = MediaType.json
+        var jsonObject = JsonObject()
+        jsonObject.setString(requestData.email, for: "email")
+        jsonObject.setString(requestData.password, for: "password")
+        let body = try JsonSerialization.data(jsonObject)
+        let httpRequest = HttpRequest(method: method, uri: uri, version: HttpVersion.http1dot1, headers: headers, body: body)
         return httpRequest
     }
     
-    override func parseHttpResponse(httpResponse: Http.Response) throws -> AddNewUserResult {
+    override func parseResponse(_ httpResponse: HttpResponse) throws -> AddNewUserResult {
         let code = httpResponse.code
-        if code == Http.Response.Code.created {
+        if code == HttpResponseCode.created {
             let body = httpResponse.body ?? Data()
-            let jsonValue = try JSONSerialization.json(data: body)
+            let jsonValue = try JsonSerialization.jsonValue(body)
             let jsonObject = try jsonValue.object()
             let token = try jsonObject.string("token")
             let addedNewUser = AddedNewUser(token: token)
             return .addedNewUser(addedNewUser)
         } else if code == 422 {
             let body = httpResponse.body ?? Data()
-            let jsonValue = try JSONSerialization.json(data: body)
+            let jsonValue = try JsonSerialization.jsonValue(body)
             let jsonObject = try jsonValue.object()
             let message = try jsonObject.string("message")
             return .validationFailed(message)
         } else {
-            let error = UnexpectedHttpResponseCodeError(code: code)
+            let error = MessageError("ggg")
             throw error
         }
     }

@@ -9,25 +9,25 @@ import ASwift
 import AFoundation
 
 class GetTaskDetailsHttpExchange: ApiHttpExchange<GettingTaskDetails, GetTaskDetailsResult> {
-    override func constructHttpRequest(data: GettingTaskDetails) throws -> Http.Request {
-        let method = Http.Request.Method.get
+    override func constructRequest() throws -> HttpRequest {
+        let method = HttpRequestMethod.get
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
-        urlComponents.path = "\(basePath)/tasks/\(data.task)"
-        let uri = try urlComponents.constructUrl()
+        urlComponents.path = "\(basePath)/tasks/\(requestData.task)"
+        let uri = try urlComponents.url()
         var headers: [String: String] = [:]
-        headers[Http.HeaderField.contentType] = MediaType.Application.Json.template
-        headers["Authorization"] = "Bearer \(data.token)"
-        let httpRequest = Http.Request(method: method, uri: uri, version: Http.Version.http1dot1, headers: headers, body: nil)
+        headers[HttpHeaderField.contentType] = MediaType.json
+        headers["Authorization"] = "Bearer \(requestData.token)"
+        let httpRequest = HttpRequest(method: method, uri: uri, version: HttpVersion.http1dot1, headers: headers, body: nil)
         return httpRequest
     }
     
-    override func parseHttpResponse(httpResponse: Http.Response) throws -> GetTaskDetailsResult {
+    override func parseResponse(_ httpResponse: HttpResponse) throws -> GetTaskDetailsResult {
         let code = httpResponse.code
-        if code == Http.Response.Code.ok {
+        if code == HttpResponseCode.ok {
             let body = httpResponse.body ?? Data()
-            let jsonValue = try JSONSerialization.json(data: body)
+            let jsonValue = try JsonSerialization.jsonValue(body)
             let jsonObject = try jsonValue.object()
             let taskJsonObject = try jsonObject.object("task")
             let id = try taskJsonObject.number("id").int()
@@ -42,14 +42,14 @@ class GetTaskDetailsHttpExchange: ApiHttpExchange<GettingTaskDetails, GetTaskDet
             }
             let createdTask = CreatedTask(id: id, title: title, dueBy: dueBy, priority: priority)
             return .gettedTaskDetails(createdTask)
-        } else if code == Http.Response.Code.unauthorized {
+        } else if code == HttpResponseCode.unauthorized {
             let body = httpResponse.body ?? Data()
-            let jsonValue = try JSONSerialization.json(data: body)
+            let jsonValue = try JsonSerialization.jsonValue(body)
             let jsonObject = try jsonValue.object()
             let message = try jsonObject.string("message")
             return .unauthorized(message)
         } else {
-            let error = UnexpectedHttpResponseCodeError(code: code)
+            let error = MessageError("")
             throw error
         }
     }

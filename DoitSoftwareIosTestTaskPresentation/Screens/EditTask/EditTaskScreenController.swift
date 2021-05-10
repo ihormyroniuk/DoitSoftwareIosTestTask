@@ -8,7 +8,7 @@
 import AUIKit
 import AFoundation
 
-protocol EditTaskScreenControllerDelegate: class {
+protocol EditTaskScreenControllerDelegate: AnyObject {
     func editTaskScreenControllerBack(_ editTaskScreenController: EditTaskScreenController)
     func editTaskScreenControllerEdit(_ editTaskScreenController: EditTaskScreenController, _ editingTask: Task)
 }

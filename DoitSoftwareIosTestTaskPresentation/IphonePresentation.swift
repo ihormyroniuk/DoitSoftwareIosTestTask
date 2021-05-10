@@ -7,7 +7,7 @@
 
 import AUIKit
 
-public protocol IphonePresentationDelegate: class {
+public protocol IphonePresentationDelegate: AnyObject {
     func iphonePresentationSignUp(_ iphonePresentation: IphonePresentation, data: SignInData, completionHandler: @escaping (Result<SignUpResult, Error>) -> ())
     func iphonePresentationSignIn(_ iphonePresentation: IphonePresentation, data: SignInData, completionHandler: @escaping (Result<SignInResult, Error>) -> ())
     func iphonePresentationTasksList(_ iphonePresentation: IphonePresentation, page: Int, completionHandler: @escaping (Result<[Task], Error>) -> ())
@@ -54,6 +54,18 @@ public class IphonePresentation: AUIWindowPresentation, SignInSignUpScreenContro
         return alertController
     }
     
+    private func createErrorAlert(_ error: Error) -> UIAlertController {
+        let alertController = UIAlertController(title: nil, message: "Unexpected Error", preferredStyle: .alert)
+        let shareAlertAction = UIAlertAction(title: "Share", style: .default) { alertAction in
+            let ac = UIActivityViewController(activityItems: [String(reflecting: error)], applicationActivities: nil)
+            self.mainNavigationController?.present(ac, animated: true)
+        }
+        alertController.addAction(shareAlertAction)
+        let okAlertAction = UIAlertAction(title: "Ok", style: .destructive)
+        alertController.addAction(okAlertAction)
+        return alertController
+    }
+    
     // MARK: MainNavigationController
     
     weak var mainNavigationController: AUINavigationController?
@@ -82,7 +94,7 @@ public class IphonePresentation: AUIWindowPresentation, SignInSignUpScreenContro
                         self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                     }
                 case .failure(let error):
-                    let alertController = self.createAlertController(message: "\(error)")
+                    let alertController = self.createErrorAlert(error)
                     self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                 }
             }
@@ -106,7 +118,7 @@ public class IphonePresentation: AUIWindowPresentation, SignInSignUpScreenContro
                         self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                     }
                 case .failure(let error):
-                    let alertController = self.createAlertController(message: "\(error)")
+                    let alertController = self.createErrorAlert(error)
                     self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                 }
             }
@@ -155,7 +167,7 @@ public class IphonePresentation: AUIWindowPresentation, SignInSignUpScreenContro
                 case .success(let taskDetails):
                     completionHandler(taskDetails)
                 case .failure(let error):
-                    let alertController = self.createAlertController(message: "\(error)")
+                    let alertController = self.createErrorAlert(error)
                     self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                 }
             }
@@ -209,7 +221,7 @@ public class IphonePresentation: AUIWindowPresentation, SignInSignUpScreenContro
                         self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                     }
                 case .failure(let error):
-                    let alertController = self.createAlertController(message: "\(error)")
+                    let alertController = self.createErrorAlert(error)
                     self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                 }
             }
@@ -241,7 +253,7 @@ public class IphonePresentation: AUIWindowPresentation, SignInSignUpScreenContro
                         self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                     }
                 case .failure(let error):
-                    let alertController = self.createAlertController(message: "\(error)")
+                    let alertController = self.createErrorAlert(error)
                     self.mainNavigationController?.present(alertController, animated: true, completion: nil)
                 }
             }
