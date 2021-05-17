@@ -11,6 +11,7 @@ import DoitSoftwareIosTestTaskPresentation
 import DoitSoftwareIosTestTaskStorage
 
 class Application: AUIEmptyApplication, IphonePresentationDelegate {
+    
     // MARK: Launching
     
     override func didFinishLaunching() {
@@ -236,5 +237,5 @@ class Application: AUIEmptyApplication, IphonePresentationDelegate {
             }
         }
     }
+    
 }
-
