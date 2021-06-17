@@ -9,6 +9,7 @@ import AUIKit
 import DoitSoftwareTestApi
 import DoitSoftwareIosTestTaskPresentation
 import DoitSoftwareIosTestTaskStorage
+import DoitSoftwareIosTestTaskNotifier
 
 class Application: AUIEmptyApplication, IphonePresentationDelegate {
     
@@ -33,6 +34,11 @@ class Application: AUIEmptyApplication, IphonePresentationDelegate {
         return storage
     }()
     
+    private lazy var notifier: Notifier = {
+        let notifier = Notifier()
+        return notifier
+    }()
+    
     // MARK: Presentation
     
     private lazy var presentationWindow: UIWindow = {
@@ -52,6 +58,9 @@ class Application: AUIEmptyApplication, IphonePresentationDelegate {
             iphonePresentation.beReadySignedIn()
         }
         presentationWindow.makeKeyAndVisible()
+        notifier.registerLocal()
+        let task = Task2(id: 1, title: "bla", dueBy: Date(), priority: .high)
+        notifier.scheduleTask(task)
     }
     
     // MARK: IphonePresentationDelegate

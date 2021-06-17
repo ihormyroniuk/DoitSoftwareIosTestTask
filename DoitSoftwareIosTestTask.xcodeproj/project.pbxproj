@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6278CC12B1844A8BD7F9340D /* Pods_DoitSoftwareIosTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D721C2596913F938D62403 /* Pods_DoitSoftwareIosTestTask.framework */; };
 		7A9A6F511CA69E50BBE89047 /* Pods_DoitSoftwareIosTestTaskPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BB8459B57D039EC24C8B4C /* Pods_DoitSoftwareIosTestTaskPresentation.framework */; };
+		C564CA992652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = C564CA972652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C564CA9C2652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C564CA952652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework */; };
+		C564CA9D2652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C564CA952652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C564CAA22652F4B1007C57CA /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C564CAA12652F4B1007C57CA /* Notifier.swift */; };
 		C5780EBE259624B700C26416 /* CreateTaskHttpExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780EBD259624B700C26416 /* CreateTaskHttpExchange.swift */; };
 		C5780EC2259624D300C26416 /* CreatingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780EC1259624D300C26416 /* CreatingTask.swift */; };
 		C5780EC52596252A00C26416 /* TaskPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5780EC42596252A00C26416 /* TaskPriority.swift */; };
@@ -81,6 +85,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C564CA9A2652F4A3007C57CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C57EA8EB259548BA009CB01F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C564CA942652F4A3007C57CA;
+			remoteInfo = DoitSoftwareIosTestTaskNotifier;
+		};
 		C57EA91B25954E02009CB01F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C57EA8EB259548BA009CB01F /* Project object */;
@@ -113,6 +124,7 @@
 			files = (
 				C5ECAC832597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework in Embed Frameworks */,
 				C5ECAC3E25978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework in Embed Frameworks */,
+				C564CA9D2652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework in Embed Frameworks */,
 				C57EA91E25954E02009CB01F /* DoitSoftwareTestApi.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -127,6 +139,10 @@
 		4B4C9DED6BA5FF585E866655 /* Pods-DoitSoftwareTestApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareTestApi.release.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareTestApi/Pods-DoitSoftwareTestApi.release.xcconfig"; sourceTree = "<group>"; };
 		96EA839887824F32584942D6 /* Pods-DoitSoftwareTestApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareTestApi.debug.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareTestApi/Pods-DoitSoftwareTestApi.debug.xcconfig"; sourceTree = "<group>"; };
 		B3ACF49E34C9B1A97EB8C0F1 /* Pods-DoitSoftwareIosTestTaskPresentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoitSoftwareIosTestTaskPresentation.debug.xcconfig"; path = "Target Support Files/Pods-DoitSoftwareIosTestTaskPresentation/Pods-DoitSoftwareIosTestTaskPresentation.debug.xcconfig"; sourceTree = "<group>"; };
+		C564CA952652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DoitSoftwareIosTestTaskNotifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C564CA972652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoitSoftwareIosTestTaskNotifier.h; sourceTree = "<group>"; };
+		C564CA982652F4A3007C57CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C564CAA12652F4B1007C57CA /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
 		C5780EBD259624B700C26416 /* CreateTaskHttpExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskHttpExchange.swift; sourceTree = "<group>"; };
 		C5780EC1259624D300C26416 /* CreatingTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingTask.swift; sourceTree = "<group>"; };
 		C5780EC42596252A00C26416 /* TaskPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPriority.swift; sourceTree = "<group>"; };
@@ -203,12 +219,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C564CA922652F4A3007C57CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C57EA8F0259548BA009CB01F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C5ECAC3D25978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework in Frameworks */,
 				C57EA91D25954E02009CB01F /* DoitSoftwareTestApi.framework in Frameworks */,
+				C564CA9C2652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework in Frameworks */,
 				C5ECAC822597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework in Frameworks */,
 				6278CC12B1844A8BD7F9340D /* Pods_DoitSoftwareIosTestTask.framework in Frameworks */,
 			);
@@ -248,6 +272,16 @@
 				10BB8459B57D039EC24C8B4C /* Pods_DoitSoftwareIosTestTaskPresentation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C564CA962652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier */ = {
+			isa = PBXGroup;
+			children = (
+				C564CAA12652F4B1007C57CA /* Notifier.swift */,
+				C564CA972652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.h */,
+				C564CA982652F4A3007C57CA /* Info.plist */,
+			);
+			path = DoitSoftwareIosTestTaskNotifier;
 			sourceTree = "<group>";
 		};
 		C5780EBC2596249E00C26416 /* CreateTask */ = {
@@ -337,6 +371,7 @@
 				C57EA91725954E02009CB01F /* DoitSoftwareTestApi */,
 				C5ECAC3725978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation */,
 				C5ECAC7C2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage */,
+				C564CA962652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier */,
 				C57EA8F4259548BA009CB01F /* Products */,
 				E1CDD2D9BDD63C2ADF6094DC /* Pods */,
 				37DE0997216E1889312F83FB /* Frameworks */,
@@ -350,6 +385,7 @@
 				C57EA91625954E02009CB01F /* DoitSoftwareTestApi.framework */,
 				C5ECAC3625978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation.framework */,
 				C5ECAC7B2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage.framework */,
+				C564CA952652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -512,6 +548,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		C564CA902652F4A3007C57CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C564CA992652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C57EA91125954E02009CB01F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,6 +583,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C564CA942652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C564CAA02652F4A3007C57CA /* Build configuration list for PBXNativeTarget "DoitSoftwareIosTestTaskNotifier" */;
+			buildPhases = (
+				C564CA902652F4A3007C57CA /* Headers */,
+				C564CA912652F4A3007C57CA /* Sources */,
+				C564CA922652F4A3007C57CA /* Frameworks */,
+				C564CA932652F4A3007C57CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoitSoftwareIosTestTaskNotifier;
+			productName = DoitSoftwareIosTestTaskNotifier;
+			productReference = C564CA952652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C57EA8F2259548BA009CB01F /* DoitSoftwareIosTestTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C57EA907259548BB009CB01F /* Build configuration list for PBXNativeTarget "DoitSoftwareIosTestTask" */;
@@ -556,6 +618,7 @@
 				C57EA91C25954E02009CB01F /* PBXTargetDependency */,
 				C5ECAC3C25978D2200028DD3 /* PBXTargetDependency */,
 				C5ECAC812597D60500028DD3 /* PBXTargetDependency */,
+				C564CA9B2652F4A3007C57CA /* PBXTargetDependency */,
 			);
 			name = DoitSoftwareIosTestTask;
 			productName = DoitSoftwareIosTestTask;
@@ -627,6 +690,10 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					C564CA942652F4A3007C57CA = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
 					C57EA8F2259548BA009CB01F = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -661,11 +728,19 @@
 				C57EA91525954E02009CB01F /* DoitSoftwareTestApi */,
 				C5ECAC3525978D2200028DD3 /* DoitSoftwareIosTestTaskPresentation */,
 				C5ECAC7A2597D60500028DD3 /* DoitSoftwareIosTestTaskStorage */,
+				C564CA942652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C564CA932652F4A3007C57CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C57EA8F1259548BA009CB01F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -790,6 +865,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C564CA912652F4A3007C57CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C564CAA22652F4B1007C57CA /* Notifier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C57EA8EF259548BA009CB01F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -873,6 +956,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C564CA9B2652F4A3007C57CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C564CA942652F4A3007C57CA /* DoitSoftwareIosTestTaskNotifier */;
+			targetProxy = C564CA9A2652F4A3007C57CA /* PBXContainerItemProxy */;
+		};
 		C57EA91C25954E02009CB01F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C57EA91525954E02009CB01F /* DoitSoftwareTestApi */;
@@ -902,6 +990,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C564CA9E2652F4A3007C57CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9R8XNB4KQ9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DoitSoftwareIosTestTaskNotifier/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.ihormyroniuk.DoitSoftwareIosTestTaskNotifier;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C564CA9F2652F4A3007C57CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9R8XNB4KQ9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DoitSoftwareIosTestTaskNotifier/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.ihormyroniuk.DoitSoftwareIosTestTaskNotifier;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C57EA905259548BB009CB01F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1238,6 +1385,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C564CAA02652F4A3007C57CA /* Build configuration list for PBXNativeTarget "DoitSoftwareIosTestTaskNotifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C564CA9E2652F4A3007C57CA /* Debug */,
+				C564CA9F2652F4A3007C57CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C57EA8EE259548BA009CB01F /* Build configuration list for PBXProject "DoitSoftwareIosTestTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
